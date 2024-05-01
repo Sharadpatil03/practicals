@@ -1,0 +1,64 @@
+class Employee:
+    def __init__(self, name, punctuality, quality_of_work, teamwork, communication):
+        self.name = name
+        self.punctuality = punctuality
+        self.quality_of_work = quality_of_work
+        self.teamwork = teamwork
+        self.communication = communication
+
+    def evaluate_punctuality(self):
+        if self.punctuality >= 9:
+            return "Excellent punctuality"
+        elif 7 <= self.punctuality < 9:
+            return "Good punctuality"
+        else:
+            return "Needs improvement in punctuality"
+
+    def evaluate_quality_of_work(self):
+        if self.quality_of_work >= 9:
+            return "Consistently delivers high-quality work"
+        elif 7 <= self.quality_of_work < 9:
+            return "Quality of work meets expectations"
+        else:
+            return "Quality of work needs improvement"
+
+    def evaluate_teamwork(self):
+        if self.teamwork >= 9:
+            return "Excellent team player"
+        elif 7 <= self.teamwork < 9:
+            return "Works well in a team"
+        else:
+            return "Needs improvement in teamwork"
+
+    def evaluate_communication(self):
+        if self.communication >= 9:
+            return "Strong communication skills"
+        elif 7 <= self.communication < 9:
+            return "Communicates effectively"
+        else:
+            return "Needs improvement in communication skills"
+
+    def evaluate_performance(self):
+        performance_level = (
+            self.evaluate_punctuality()
+            + ". "
+            + self.evaluate_quality_of_work()
+            + ". "
+            + self.evaluate_teamwork()
+            + ". "
+            + self.evaluate_communication()
+            + "."
+        )
+        return performance_level.strip()
+
+
+# Example usage
+employees = [
+    Employee("John Doe", 8, 9, 7, 8),
+    Employee("Jane Smith", 9, 7, 9, 8),
+    Employee("Michael Johnson", 7, 8, 9, 7),
+]
+
+for employee in employees:
+    performance_evaluation = employee.evaluate_performance()
+    print(f"Performance evaluation for {employee.name}: {performance_evaluation}")
