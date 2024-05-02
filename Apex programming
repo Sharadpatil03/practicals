@@ -1,0 +1,99 @@
+// 1) print hello :
+public class stud {
+    public static void main(){
+        system.debug ('hello');
+    }
+
+}
+
+
+
+// linear search :
+public class LinearSearch {
+    public static void demo(Integer key){
+        System.debug('Linear search ');
+        integer s=-1;
+        List<integer>lon =new List<integer>();
+        lon.add(3);
+        lon.add(4);
+        lon.add(5);
+        lon.add(6);
+        System.debug(' List:  '+lon);
+        for(integer i=0; i<lon.size(); i++){
+            if(key == lon[i]){
+                s=1;
+            }
+        }
+        
+    }
+    if(s==1){
+        System.debug('Element Found !');
+  }
+
+ }
+
+
+// addition 
+public class AddNumbers {
+    public static void main(String[] args) {
+        // Define two numbers to add
+        Integer num1 = 5;
+        Integer num2 = 10;
+
+        // Add the numbers and store the result
+        Integer sum = num1 + num2;
+
+        // Display the result
+        System.debug('The sum of ' + num1 + ' and ' + num2 + ' is ' + sum);
+    }
+}
+
+
+// prime no  :
+public class CheckPrimeNumber {
+    public static void main(String[] args) {
+        Integer num = 17; // Change this number to check for different numbers
+
+        Boolean isPrime = checkPrime(num);
+
+        if (isPrime) {
+            System.debug(num + ' is a prime number.');
+        } else {
+            System.debug(num + ' is not a prime number.');
+        }
+    }
+
+    public static Boolean checkPrime(Integer num) {
+        if (num <= 1) {
+            return false;
+        }
+
+        for (Integer i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
+
+// public class CheckCubeNumber {
+    public static void main(String[] args) {
+        Integer num = 27; // Change this number to check for different numbers
+
+        Boolean isCube = checkCube(num);
+
+        if (isCube) {
+            System.debug(num + ' is a perfect cube.');
+        } else {
+            System.debug(num + ' is not a perfect cube.');
+        }
+    }
+
+    public static Boolean checkCube(Integer num) {
+        Double cubeRoot = Math.cbrt(num);
+
+        return Math.floor(cubeRoot) == cubeRoot;
+    }
+}
